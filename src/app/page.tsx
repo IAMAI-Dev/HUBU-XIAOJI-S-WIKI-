@@ -16,12 +16,14 @@ interface CharacterData {
   codeSignature: string;
 }
 
+const ASSET_PREFIX = process.env.NODE_ENV === 'production' ? '/HUBU-XIAOJI-S-WIKI' : '';
+
 const CHARACTERS: CharacterData[] = [
   {
     name: '小计',
     title: '男生版',
     subtitle: 'Boy Version',
-    image: `/assets/xiaoji-bowtie.png`,
+    image: `${ASSET_PREFIX}/assets/xiaoji-bowtie.png`,
     color: '#1e40af',
     traits: [
       { icon: '🧠', label: '聪颖过人', desc: '墨绿发色下藏着超级大脑，算法难题不在话下' },
@@ -45,7 +47,7 @@ const CHARACTERS: CharacterData[] = [
     name: '小计',
     title: '女生版',
     subtitle: 'Girl Version',
-    image: `/assets/xiaoji-girl.png`,
+    image: `${ASSET_PREFIX}/assets/xiaoji-girl.png`,
     color: '#7c3aed',
     traits: [
       { icon: '🎀', label: '温柔细致', desc: '藏蓝长发间别着蝴蝶结，代码风格优雅又规范' },
@@ -68,20 +70,20 @@ const CHARACTERS: CharacterData[] = [
 ];
 
 const EXPRESSIONS = [
-  { label: 'WiFi断开', image: `/assets/WiFi断开.jpg`, desc: '网络怎么又断了！' },
-  { label: '不想上班', image: `/assets/不想上班.jpg`, desc: '好想继续睡觉...' },
-  { label: '减肥失败', image: `/assets/减肥失败.jpg`, desc: '吃完这顿再减！' },
-  { label: '吃薯片', image: `/assets/吃薯片.jpg`, desc: '咔嚓咔嚓咔嚓。' },
-  { label: '周一综合征', image: `/assets/周一综合征.jpg`, desc: '为什么今天是周一？' },
-  { label: '周末好短', image: `/assets/周末好短.jpg`, desc: '周末去哪儿了？' },
-  { label: '已经结束了', image: `/assets/已经结束了.jpg`, desc: '项目终于上线了。' },
-  { label: '我emo了', image: `/assets/我emo了.jpg`, desc: 'Bug 怎么越改越多...' },
-  { label: '我累了', image: `/assets/我累了.jpg`, desc: '写不动了，躺会儿。' },
-  { label: '摸鱼被抓', image: `/assets/摸鱼被抓.jpg`, desc: '老板怎么站在后面！' },
-  { label: '栓Q', image: `/assets/栓Q.jpg`, desc: '真是谢谢你啊。' },
-  { label: '生气', image: `/assets/生气.jpg`, desc: '谁把生产库删了！！' },
-  { label: '真的会写', image: `/assets/真的会写.jpg`, desc: '我真的会写这段代码！' },
-  { label: '躺平', image: `/assets/躺平.jpg`, desc: '就这样吧，毁灭吧。' },
+  { label: 'WiFi断开', image: `${ASSET_PREFIX}/assets/WiFi断开.jpg`, desc: '网络怎么又断了！' },
+  { label: '不想上班', image: `${ASSET_PREFIX}/assets/不想上班.jpg`, desc: '好想继续睡觉...' },
+  { label: '减肥失败', image: `${ASSET_PREFIX}/assets/减肥失败.jpg`, desc: '吃完这顿再减！' },
+  { label: '吃薯片', image: `${ASSET_PREFIX}/assets/吃薯片.jpg`, desc: '咔嚓咔嚓咔嚓。' },
+  { label: '周一综合征', image: `${ASSET_PREFIX}/assets/周一综合征.jpg`, desc: '为什么今天是周一？' },
+  { label: '周末好短', image: `${ASSET_PREFIX}/assets/周末好短.jpg`, desc: '周末去哪儿了？' },
+  { label: '已经结束了', image: `${ASSET_PREFIX}/assets/已经结束了.jpg`, desc: '项目终于上线了。' },
+  { label: '我emo了', image: `${ASSET_PREFIX}/assets/我emo了.jpg`, desc: 'Bug 怎么越改越多...' },
+  { label: '我累了', image: `${ASSET_PREFIX}/assets/我累了.jpg`, desc: '写不动了，躺会儿。' },
+  { label: '摸鱼被抓', image: `${ASSET_PREFIX}/assets/摸鱼被抓.jpg`, desc: '老板怎么站在后面！' },
+  { label: '栓Q', image: `${ASSET_PREFIX}/assets/栓Q.jpg`, desc: '真是谢谢你啊。' },
+  { label: '生气', image: `${ASSET_PREFIX}/assets/生气.jpg`, desc: '谁把生产库删了！！' },
+  { label: '真的会写', image: `${ASSET_PREFIX}/assets/真的会写.jpg`, desc: '我真的会写这段代码！' },
+  { label: '躺平', image: `${ASSET_PREFIX}/assets/躺平.jpg`, desc: '就这样吧，毁灭吧。' },
 ];
 
 const TIMELINE = [
@@ -492,7 +494,7 @@ function HeroSection() {
               <div className="relative">
                 <div className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-blue-600/20 to-cyan-400/20 blur-xl" />
                 <Image
-                  src={`/assets/xiaoji-bowtie.png`}
+                  src={`${ASSET_PREFIX}/assets/xiaoji-bowtie.png`}
                   alt="小计·男生版"
                   width={224}
                   height={224}
@@ -515,7 +517,7 @@ function HeroSection() {
               <div className="relative">
                 <div className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-purple-600/20 to-pink-400/20 blur-xl" />
                 <Image
-                  src={`/assets/xiaoji-girl.png`}
+                  src={`${ASSET_PREFIX}/assets/xiaoji-girl.png`}
                   alt="小计·女生版"
                   width={224}
                   height={224}
@@ -906,14 +908,14 @@ function Footer() {
       <div className="relative z-10 mx-auto max-w-7xl px-6 text-center">
         <div className="mb-6 flex items-center justify-center gap-4">
           <Image
-            src="/assets/xiaoji-bowtie.png"
+            src={`${ASSET_PREFIX}/assets/xiaoji-bowtie.png`}
             alt="小计·男生版"
             width={64}
             height={64}
             className="h-16 w-16 rounded-2xl border border-white/10 object-cover"
           />
           <Image
-            src="/assets/xiaoji-girl.png"
+            src={`${ASSET_PREFIX}/assets/xiaoji-girl.png`}
             alt="小计·女生版"
             width={64}
             height={64}
