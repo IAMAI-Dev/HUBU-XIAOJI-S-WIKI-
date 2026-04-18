@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true, // 静态导出模式下必须禁用图片优化
   },
-  basePath: isProd ? '/HUBU-XIAOJI-S-WIKI' : '',
+  basePath: isProd ? '/HUBU-XIAOJI-S-WIKI-' : '',
 };
 
 export default nextConfig;

@@ -16,7 +16,7 @@ interface CharacterData {
   codeSignature: string;
 }
 
-const ASSET_PREFIX = process.env.NODE_ENV === 'production' ? '/HUBU-XIAOJI-S-WIKI' : '';
+const ASSET_PREFIX = process.env.NODE_ENV === 'production' ? '/HUBU-XIAOJI-S-WIKI-' : '';
 
 const CHARACTERS: CharacterData[] = [
   {
